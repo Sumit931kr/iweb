@@ -101,7 +101,7 @@ p , span{
     font-size: 22px;
 }
 
-.btn{
+#btn{
 cursor: pointer;
 border: 2px solid black;
 border-radius: 5px;

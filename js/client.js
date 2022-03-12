@@ -1,5 +1,5 @@
 
-const socket = io('http://localhost:8000' || 'https://iwebchat.herokuapp.com/');
+const socket = io('http://localhost:8000');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
