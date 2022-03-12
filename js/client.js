@@ -6,9 +6,15 @@ const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container");
 var audio = new Audio('ting.mp3');
 
-const append = (message, position ) =>{
+const append = (name ,message, position ) =>{
     const messageElement = document.createElement('div');
-    messageElement.innerText = message;
+    if(position == 'center'){
+      messageElement.innerHTML = `<span>${name}</span>${message}`;
+    }
+    else{
+      messageElement.innerHTML = `<p>${name}</p>${message}`;
+
+    }
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
@@ -20,28 +26,26 @@ const append = (message, position ) =>{
 form.addEventListener('submit' ,(e)=>{
     e.preventDefault();
     const message = messageInput.value
-    append(`you: ${message}`,'right');
+    append('you', `${message}`,'right');
     socket.emit('send', message);
     messageInput.value = ""
 
 })
 
 
-const name = prompt("Enter Your name to Join");
+// const name = prompt("Enter Your name to Join");
 socket.emit('new-user-joined', name)
 
 
 socket.on('user-joined', name =>{
- append(`${name} joined the chat `, 'center');
+ append(`${name}` , '  Joined the chat', 'center');
 })
 
 socket.on('receive', data =>{
- append(`${data.name}: ${data.message}`, 'left');
+ append(`${data.name} `,`${data.message}`, 'left');
 })
 
 socket.on('left', name =>{
- append(`${name}: left the Chat`, 'center');
+ append(`${name} `, 'Left the Chat', 'center');
 })
-
-
 

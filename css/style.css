@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0in;
+}
+
+
+body{
+    height: 100vh;   
+    background-image: linear-gradient(rgb(92,100,221), purple);
+}
+
 .logo{
 display: block;
 margin: auto;
@@ -5,11 +16,9 @@ width: 50px;
 height: 50px;
 }
 
-body{
- height: 100vh;   
-    background-image: linear-gradient(rgb(92,100,221), purple);
+#first{
+    text-align: center;
 }
-
 
 /*  Container specific stuff*/
 .container{
@@ -19,6 +28,7 @@ body{
     padding: 33px;
     margin-bottom: 23px;
     overflow-y: auto;
+    scroll-behavior: smooth;
     margin: auto;
     height: 60vh;
 
@@ -42,12 +52,36 @@ clear: both;
 .center{
     margin: auto;
     clear: both;
+    width: 50%;
+    border-radius: 20%;
+    text-align: center;
+    background-color: rgb(202, 202, 202);
+    font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    padding: 0.5% 0;
 }
 
 .right{
 float: right;
 clear: both;
+
 }
+.right p{
+    color:rgb(0, 255, 42) ;
+}
+
+
+p , span{
+    /* background-color: cadetblue; */
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 2%;
+    font-size: 1.1rem;
+}
+
+
+
+
 
 /* Send stuff */
 
