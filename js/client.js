@@ -1,5 +1,5 @@
 
-const socket = io('http://localhost:8000');
+const socket = io('http://localhost:8000' || 'https://iwebchat.herokuapp.com/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
@@ -33,7 +33,7 @@ form.addEventListener('submit' ,(e)=>{
 })
 
 
-// const name = prompt("Enter Your name to Join");
+const name = prompt("Enter Your name to Join");
 socket.emit('new-user-joined', name)
 
 
