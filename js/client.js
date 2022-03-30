@@ -1,5 +1,5 @@
-
-const socket = io('https://iwebchat.herokuapp.com/');
+// const socket = io();
+const socket = io('https://iwebbackend.herokuapp.com/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
