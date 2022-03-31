@@ -4,6 +4,7 @@ const socket = io('https://iwebbackend.herokuapp.com/');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container");
+const cp = document.getElementById('cp');
 var audio = new Audio('ting.mp3');
 
 const append = (name ,message, position ) =>{
@@ -21,15 +22,18 @@ const append = (name ,message, position ) =>{
     if(position != 'right'){
       audio.play();
     }
+    // window.scrollTo(0, messageContainer.scrollHeight);
+    messageContainer.scrollTop = messageContainer.scrollHeight;
 }
 
 form.addEventListener('submit' ,(e)=>{
     e.preventDefault();
+    if(messageInput.value){
     const message = messageInput.value
     append('you', `${message}`,'right');
     socket.emit('send', message);
     messageInput.value = ""
-
+    }
 })
 
 
