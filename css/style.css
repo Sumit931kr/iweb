@@ -1,31 +1,31 @@
-*{
+* {
     margin: 0;
     padding: 0in;
 }
 
 
-body{
-    height: 100vh;   
-    background-image: linear-gradient(rgb(92,100,221), purple);
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgb(92, 100, 221), purple);
 }
 
-.logo{
-display: block;
-margin: auto;
-width: 50px;
-height: 50px;
+.logo {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
 }
 
-#first{
+#first {
     text-align: center;
 }
 
 /*  Container specific stuff*/
-.container{
+.container {
     max-width: 1000px;
     /* background-color: red; */
     border: 2px solid black;
-    padding: 33px;
+    padding: 10px;
     margin-bottom: 23px;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -34,47 +34,93 @@ height: 50px;
 
 }
 
-.message{
-background-color: rgb(214, 211, 211);
-width: 24%;
-padding: 10px;
-margin: 17px 12px;
-border: 2px solid black;
-border-radius: 10px;
-color: rgb(0, 0, 0);
+/* USer ONline Section */
+
+.onlinesection {
+    max-width: 1000px;
+    border: 2px solid black;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 5vh;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
 }
 
-.left{
-float: left;
-clear: both;
+.onlinesection>div {
+    text-align: center;
+   
+
 }
 
-.center{
+.dot {
+    height: 1.5vh;
+    width: 1.5vh;
+    background-color: rgb(49 246 16);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 2px 3px 12px 1px rgb(49 246 16);
+    margin: 0.8vw;
+    
+}
+
+.oname {
+    color: white;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+.message {
+    background-color: rgb(214, 211, 211);
+    width: 24%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.center {
     margin: auto;
     clear: both;
     width: 50%;
     border-radius: 20%;
     text-align: center;
     background-color: rgb(202, 202, 202);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     padding: 0.5% 0;
 }
 
-.right{
-float: right;
-clear: both;
+.right {
+    float: right;
+    clear: both;
 
 }
-.right p{
-    color:rgb(0, 255, 42) ;
+
+.right p {
+    color: rgb(0, 255, 42);
 }
 
 
-p , span{
+p,
+span {
     /* background-color: cadetblue; */
     font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 2%;
     font-size: 1.1rem;
 }
@@ -85,15 +131,15 @@ p , span{
 
 /* Send stuff */
 
-#send-container{
-   display: block;
-   margin: auto;
-   text-align: center;
-   max-width: 1000px;
-   width: 100%;
+#send-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
 }
 
-#messageInp{
+#messageInp {
     width: 85%;
     border-radius: 0%;
     border-radius: 5px;
@@ -101,11 +147,10 @@ p , span{
     font-size: 22px;
 }
 
-#btn{
-cursor: pointer;
-border: 2px solid black;
-border-radius: 5px;
-height: 34px;
-width: 10%;
+#btn {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 34px;
+    width: 10%;
 }
-
